@@ -21,3 +21,21 @@
 * lifecycle rules can help you tell terraform not to delete a resource until the new resource has been created
 
 * data sources help you read content or resources that are not managed by terraform
+
+* when you want to use s3 as a remote backend for state, there are a few things you need to configure. First create an s3 bucket youll use for storing the state file
+then youll need a dynamodb table if you want to enable state locking. the dynamodb table will have a partition key called "LockID" with type "string"
+to configure the remote state, youll need to add a remote section to your terraform config file. check the documentation for further instructions.
+
+* you can also store your backend config inside a terraform.tf file, instead of your main.tf file
+
+* terraform state list (to list the resources in a state file)
+
+* terraform state show resource_name (it shows all the attributes of the listed resource)
+
+* terraform state mv SOURCE DEST (can be used to rename a resource or move it from one state file to another)
+
+* terraform state pull (used to pull the state from a remote backend and display it on screen)
+
+* terraform state rm RESOURCE (used to delete items from a state file)
+
+* 
