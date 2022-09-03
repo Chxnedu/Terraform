@@ -8,7 +8,7 @@ resource "aws_iam_user" "testuser" {
   }
 }
 resource "aws_iam_policy" "adminpolicy" {
-  name = "test_admin_policy"
+  name   = "test_admin_policy"
   policy = <<EOF
 {
     "Version": "2012-10-17",

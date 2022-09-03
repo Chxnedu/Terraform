@@ -8,6 +8,8 @@
 
 * terraform destroy (to destroy the infrastructure you created)
 
+* terraform destroy -target resource_type.name (to delete a particular resource)
+
 * to use the output from one resource in another, you put it like this; ${resource_type.resource_name.attribute} 
 
 * you can explicitly make a resource depend on another resource by using the "depends_on = {}"
@@ -38,4 +40,12 @@ to configure the remote state, youll need to add a remote section to your terraf
 
 * terraform state rm RESOURCE (used to delete items from a state file)
 
-* 
+* terraform taint
+
+* terraform untaint
+
+* export TF_LOG=<log level> (used to view logs. the levels are; INFO, WARNING, ERROR, DEBUG, TRACE)
+
+* terraform import resource.resource_name id (used to import a resource created outside terraform into terraform for it to manage)
+
+*  
