@@ -48,4 +48,12 @@ to configure the remote state, youll need to add a remote section to your terraf
 
 * terraform import resource.resource_name id (used to import a resource created outside terraform into terraform for it to manage)
 
+* theres a concept in terraform called "modules". These modules can be used to simplify your terraform config
+
+* terraform workspace new ProjectA (to create a new workspace called ProjectA)
+
+* terraform workspace list (to list the workspaces)
+
+* terraform workspace select Name (to change to a different workspace)
+
 *  
